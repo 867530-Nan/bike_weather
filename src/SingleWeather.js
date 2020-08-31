@@ -90,7 +90,7 @@ class SingleWeather extends React.Component {
               alignItems: "center",
             }}
           >
-            <img src={this.state.icon ? this.state.icon : ""} />{" "}
+            <img alt="image" src={this.state.icon ? this.state.icon : ""} />{" "}
             {this.kelvinToFahr()}
           </div>
         </h3>
