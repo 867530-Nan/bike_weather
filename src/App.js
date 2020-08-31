@@ -1,6 +1,7 @@
 import React from "react";
 import Mountain from "./MountainRoad.jpg";
 import SingleWeather from "./SingleWeather";
+import Countdown from "./Countdown";
 import "./App.css";
 
 function App() {
@@ -32,9 +33,13 @@ function App() {
   ];
   return (
     <div style={getMountainStyle(Mountain)}>
-      {list.map((single) => {
-        return <SingleWeather info={single} />;
-      })}
+      <h1 style={styles.header}>Let's Ride</h1>
+      {/* <Countdown /> */}
+      <div style={styles.weather}>
+        {list.map((single) => {
+          return <SingleWeather info={single} />;
+        })}
+      </div>
     </div>
   );
 }
@@ -43,12 +48,6 @@ const getMountainStyle = (pic) => {
   return {
     ...styles.root,
     background: `url(${pic}) fixed center`,
-    overflowY: "none",
-    flexDirection: "row",
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    alignItems: "center",
   };
 };
 
@@ -56,6 +55,27 @@ const styles = {
   root: {
     height: "100vh",
     width: "100vw",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+  },
+  header: {
+    textAlign: "center",
+    margin: "0",
+    fontSize: "102px",
+    color: "white",
+    fontFamily: "Cedarville Cursive",
+  },
+  weather: {
+    overflowY: "none",
+    flexDirection: "row",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "initial",
+    width: "100%",
   },
 };
 
