@@ -3,3 +3,16 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+  .letsRide {
+    font-size: 64px !important;
+  }
+  .smallBlack {
+    color: black !important;
+    font-weight: 400 !important;
+  }
+  .mountain {
+    height: "100%";
+  }
+}

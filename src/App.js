@@ -30,12 +30,35 @@ function App() {
       url: "https://www.wunderground.com/weather/KWYS",
     },
   ];
+  const determineDay = (index) => {
+    switch (index) {
+      case 0:
+        return "Day 1";
+      case 1:
+        return "Day 2";
+      case 2:
+        return "Days 3-4";
+      case 3:
+        return "Days 5-8";
+      default:
+        break;
+    }
+  };
   return (
-    <div style={getMountainStyle(Mountain)}>
-      <h1 style={styles.header}>Let's Ride</h1>
+    <div className="mountain" style={getMountainStyle(Mountain)}>
+      <h1 className="letsRide smallBlack" style={styles.header}>
+        Let's Ride
+      </h1>
       <div style={styles.weather}>
-        {list.map((single) => {
-          return <SingleWeather info={single} />;
+        {list.map((single, index) => {
+          return (
+            <span style={styles.singleDay}>
+              <h1 className="smallBlack" style={styles.dayOne}>
+                {determineDay(index)}
+              </h1>
+              <SingleWeather info={single} />
+            </span>
+          );
         })}
       </div>
     </div>
@@ -50,9 +73,14 @@ const getMountainStyle = (pic) => {
 };
 
 const styles = {
+  dayOne: {
+    margin: "0",
+    color: "white",
+    fontWeight: 300,
+  },
   root: {
     height: "100vh",
-    width: "100vw",
+    width: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -65,8 +93,14 @@ const styles = {
     color: "white",
     fontFamily: "Cedarville Cursive",
   },
+  singleDay: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   weather: {
-    overflowY: "none",
+    overflowY: "scroll",
     flexDirection: "row",
     display: "flex",
     flexWrap: "wrap",
