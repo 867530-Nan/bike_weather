@@ -91,7 +91,7 @@ class SingleWeather extends React.Component {
             }}
           >
             <img
-              alt={`weather image for ${this.props.info.first}`}
+              alt={`weather for ${this.props.info.first}`}
               src={this.state.icon ? this.state.icon : ""}
             />{" "}
             {this.kelvinToFahr()}
