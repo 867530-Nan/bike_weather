@@ -56,6 +56,9 @@ class SingleWeather extends React.Component {
     }
   };
   decipherName = () => {
+    if (this.props.info.home) {
+      return "Salt Lake City";
+    }
     if (this.state.city.name) {
       switch (this.props.info.first) {
         case "Jensen":

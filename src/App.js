@@ -6,42 +6,62 @@ import "./App.css";
 function App() {
   const list = [
     {
+      first: "Salt Lake City",
+      second: "Ut",
+      cityId: "5856194",
+      url: "https://www.wunderground.com/forecast/us/ut/salt-lake-city",
+      home: true,
+    },
+    {
       first: "Jensen",
       second: "Co",
       cityId: "5784154",
       url: "https://www.wunderground.com/dashboard/pws/KUTUTAH2",
+      home: false,
     },
     {
       first: "Manila",
       second: "Ut",
       cityId: "5777855",
       url: "https://www.wunderground.com/weather/us/co/dinosaur",
+      home: false,
     },
     {
       first: "Jackson",
       second: "Wy",
       cityId: "5733351",
       url: "https://www.wunderground.com/weather/us/wy/jackson",
+      home: false,
     },
     {
       first: "Yellowstone",
       second: "Id",
       cityId: "5687489",
       url: "https://www.wunderground.com/weather/KWYS",
+      home: false,
+    },
+    {
+      first: "Salt Lake City",
+      second: "Ut",
+      cityId: "5856194",
+      url: "https://www.wunderground.com/forecast/us/ut/salt-lake-city",
+      home: true,
     },
   ];
   const determineDay = (index) => {
     switch (index) {
       case 0:
-        return "Day 1";
+        return "Home";
       case 1:
-        return "Day 2";
+        return "Day 1";
       case 2:
-        return "Days 3-4";
+        return "Day 2";
       case 3:
+        return "Days 3-4";
+      case 4:
         return "Days 5-8";
       default:
-        break;
+        return "Home";
     }
   };
   return (
