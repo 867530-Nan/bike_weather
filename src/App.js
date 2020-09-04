@@ -9,7 +9,7 @@ function App() {
       first: "Salt Lake City",
       second: "Ut",
       cityId: "5856194",
-      url: "https://www.wunderground.com/forecast/us/ut/salt-lake-city",
+      url: "https://openweathermap.org/city/5780993",
       home: true,
     },
     {
@@ -44,7 +44,7 @@ function App() {
       first: "Salt Lake City",
       second: "Ut",
       cityId: "5856194",
-      url: "https://www.wunderground.com/forecast/us/ut/salt-lake-city",
+      url: "https://openweathermap.org/city/5780993",
       home: true,
     },
   ];
